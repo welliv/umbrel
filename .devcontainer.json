@@ -1,6 +1,0 @@
-{
-  "name": "umbrel",
-  "service": "umbrel",
-  "forwardPorts": [80],
-  "dockerComposeFile": "compose.yml"
-}
