@@ -1,7 +1,7 @@
 services:
   umbrel:
-    image: dockurr/umbrel
     container_name: umbrel
+    image: ghcr.io/dockur/umbrel
     pid: host
     ports:
       - 80:80
