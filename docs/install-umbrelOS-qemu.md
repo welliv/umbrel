@@ -52,8 +52,8 @@ cp /usr/share/OVMF/OVMF_VARS_4M.fd /root/umbrel_vars.fd
 ---
 
 ## Phase 3: Manual Installation (VNC)
-
-The `bootindex` flags are critical; they force the system to boot from the installer first.
+1. **Firewall:** `sudo ufw allow 5900/tcp`
+2. The `bootindex` flags are critical; they force the system to boot from the installer first.
 
 ```bash
 qemu-system-x86_64 -m [RAM] -enable-kvm -cpu host \
@@ -68,8 +68,7 @@ qemu-system-x86_64 -m [RAM] -enable-kvm -cpu host \
 
 ```
 
-1. **Firewall:** `sudo ufw allow 5900/tcp`
-2. **Action:** Connect your VNC client to `[YOUR_VPS_IP]:5900`.
+3. **Action:** Connect your VNC client to `[YOUR_IP]:5900`.
 <img width="449" height="172" alt="image" src="https://github.com/user-attachments/assets/2c095bd5-afd3-408d-96df-ccd158c1423e" />
 <img width="803" height="308" alt="image" src="https://github.com/user-attachments/assets/3571f1da-d949-437c-ab60-4a76e5a28f38" />
 
@@ -124,10 +123,10 @@ sudo systemctl enable --now umbrel
 
 ### **Accessing Your Dashboard**
 
-Once the service is started, Umbrel is accessible via your web browser:
+**Once the service is started, Umbrel is accessible via your web browser on this URL :** `http://[YOUR_IP]:8080`
+
 <img width="1170" height="621" alt="image" src="https://github.com/user-attachments/assets/d988ce86-2563-4cd2-ae49-e17ef7abb5e7" />
 
-* **URL:** `http://[YOUR_VPS_IP]:8080`
 
 ---
 
